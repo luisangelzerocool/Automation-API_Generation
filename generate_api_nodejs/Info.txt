@@ -1,0 +1,10 @@
+# main-generar_api_desde_modelo
+se genera una API desde un modelo que uno especifique en el main
+sólo se genera 1 modelo por ejecución
+debe existir un arquetipo generado previamente con carpetas models y routes
+
+# main-generar_arquetipo_api
+se ejecuta 1 vez para un proyecto, si se vuelve a ejecutar, borra todo y crea uno desde cero
+
+
+la carpeta que se genera está 1 ruta detrás y se llama: _API_NodeJS-Generated
