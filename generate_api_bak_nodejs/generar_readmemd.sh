@@ -1,3 +1,9 @@
+#!/bin/bash
+
+#README.md
+readme='
+# Arquetipo de API de NodeJS Generado Automaticamente
+
 # Versión
 
 * Angular CLI: 9.0.7
@@ -22,3 +28,7 @@ Después de generado el arquetipo, desde la ruta de la API se ejecuta `npm insta
 * Usamos el `server.js` para conectarnos a nuestra base de datos MongoDB y seteamos las routes y definimos el puerto donde correrá la app
 * Usamos el archivo de modelo de la entidad `Employee.js` para construir nuestra entidad en la base de datos mongoDB, por medio de mongoose
 * Usamos los routes para crear la lógica del negocio, el CRUD de la API. 
+'
+echo "$readme" > ./_API_NodeJS-Generated/README.md
+echo 'README.md generado correctamente!'
+
