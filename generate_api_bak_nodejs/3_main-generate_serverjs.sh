@@ -1,14 +1,13 @@
 #!/bin/bash
 echo '******GENERANDO EL SERVER JS******'
-echo ''
-echo 'Introduzca el nombre de la BD'
+echo 'Introduzca el nombre de la BD:'
 read _nombreBD
 
+# INICIO bloque de código que crea los modelos en el server, partiendo de los archivos que haya en la carpeta models
 modelos=""
-for modelo in `cd _API_NodeJS-Generated/models/ && find`; do #muestra . y muestra ./interfaz
+for modelo in `cd _API_NodeJS-Generated/models/ && find`; do #muestra . y muestra ./archivo.js
 modeloConExt=`basename -s .txt "$modelo"` #Obtengo el nombre base del archivo.js me aparecerá sin ./archivo.js
 modeloSinExt="${modeloConExt%.*}" #obtengo archivo sin extensión
-
 if [ "${modeloSinExt}" != '' ];#como simpre lee un nombre . "vacio" entonces lo ovbio
 then
 modelos=$modelos"var ${modeloSinExt}Router= require('./routes/${modeloSinExt}Router'); 
@@ -16,6 +15,7 @@ app.use('/${modeloSinExt}api', ${modeloSinExt}Router);
 "
 fi
 done
+# FIN bloque de código que crea los modelos en el server, partiendo de los archivos que haya en la carpeta models
 
 #Server.js
 server="
