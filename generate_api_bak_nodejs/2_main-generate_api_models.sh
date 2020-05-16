@@ -1,5 +1,11 @@
 #!/bin/bash
 echo '******GENERANDO EL MODELO JS******'
+echo 'Desea agregar un modelo(y/n)?'
+read _condicion
+while [ $_condicion = y ]
+do
+
+
 echo 'Introduzca el modelo:'
 read _modelo
 echo 'Introduzca los atributos separados por espacios:'
@@ -21,5 +27,10 @@ _modeloInstance=$_modelo'Instance'
 ./generate_routejs.sh $_modelo $_modeloRouter $_modeloInstance
 #InfoAPI
 ./generate_info_api.sh $_modelo
+
+echo 'Desea agregar un modelo(y/n)?'
+read _condicion
+
+done
 
 

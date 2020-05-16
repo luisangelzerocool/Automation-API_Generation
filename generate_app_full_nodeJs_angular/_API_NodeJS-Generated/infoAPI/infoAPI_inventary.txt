@@ -1,0 +1,29 @@
+
+INFORMACIÓN DE LA API
+
+Modelo: inventary
+Atributos:
+identification details valuer
+--------------------------------------------
+Ruta Base de la API: inventaryapi
+
+# CREATE: 
+url: localhost:3000/inventaryapi/add
+metodo: post
+
+# FIND-ALL: 
+url: localhost:3000/inventaryapi/
+metodo: get
+
+# FIND: 
+url: localhost:3000/inventaryapi/edit/:id
+metodo: get
+
+# UPDATE: 
+url: localhost:3000/inventaryapi/update/:id
+metodo: post
+
+# DELETE: 
+url: localhost:3000/inventaryapi/delete/:id
+metodo: get
+

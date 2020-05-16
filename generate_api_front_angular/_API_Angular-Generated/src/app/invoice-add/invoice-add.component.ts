@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
@@ -22,21 +23,14 @@ export class InvoiceAddComponent implements OnInit {
 
   createForm() {
     this.invoice_addForm = this.fb.group({
-      serial:  ['', Validators.compose([Validators.required, Validators.minLength(8)])],
-      brand:  ['', Validators.required],
-      model:  ['', Validators.required],
-      ubication: ['', Validators.required],
-      price_shopping:  ['', Validators.required],
-      receipt_shopping: ['', Validators.required],
-      creation_date: ['', Validators.required],
-      sale_date:['', Validators.required],
-      seller_identification:['', Validators.required],
-      state: ['', Validators.required]
+      
+	  numero: ['', Validators.required],detalle: ['', Validators.required],valor: ['', Validators.required]
+	  
     });
   }
 
-  addInvoice (serial,brand,model,ubication,price_shopping,receipt_shopping,creation_date,sale_date,seller_identification,state) {
-  this.bs.addInvoice(serial,brand,model,ubication,price_shopping,receipt_shopping,creation_date,sale_date,seller_identification,state);
+  addInvoice (numero,detalle,valor) {
+  this.bs.addInvoice(numero,detalle,valor);
   location.reload();
   this.dataadded = true;
   this.msg = 'Data Added successfully';
@@ -46,3 +40,4 @@ export class InvoiceAddComponent implements OnInit {
   }
 
 }
+

@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -6,23 +7,16 @@ import { HttpClient } from '@angular/common/http';
 })
 export class InvoiceService {
 
-  uri = 'http://localhost:3000/invoiceapi';
+  uri = 'http://localhost:3000/invoice';
 
 
   constructor(private http: HttpClient) { }
 
-  addInvoice(serial,brand,model,ubication,price_shopping,receipt_shopping,creation_date,sale_date,seller_identification,state) {
+  addInvoice(numero,detalle,valor) {
     const obj = {
-      serial:serial,
-      brand:brand,
-      model:model,
-      ubication:ubication,
-      price_shopping:price_shopping,
-      receipt_shopping:receipt_shopping,
-      creation_date:creation_date,
-      sale_date:sale_date,
-      seller_identification:seller_identification,
-      state:state
+      
+	  numero:numero,detalle:detalle,valor:valor
+	  
     };
     console.log(obj);
     this.http.post(`${this.uri}/add`, obj)
@@ -37,18 +31,11 @@ export class InvoiceService {
     return this.http.get(`${this.uri}/edit/${id}`);
   }
 
-  updateInvoice(serial,brand,model,ubication,price_shopping,receipt_shopping,creation_date,sale_date,seller_identification,state,id) {
+  updateInvoice(numero,detalle,valor ,id) {
     const obj = {
-      serial:serial,
-      brand:brand,
-      model:model,
-      ubication:ubication,
-      price_shopping:price_shopping,
-      receipt_shopping:receipt_shopping,
-      creation_date:creation_date,
-      sale_date:sale_date,
-      seller_identification:seller_identification,
-      state:state
+      
+	  numero:numero,detalle:detalle,valor:valor
+	  
     };
     this.http.post(`${this.uri}/update/${id}`, obj)
       .subscribe(res => console.log('Done'));

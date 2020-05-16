@@ -1,0 +1,45 @@
+
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="invoice_addForm" novalidate>
+
+            
+			<div class="form-group">
+                <label class="col-md-4">identification</label>
+                <input type="text" class="form-control" formControlName="identification" #identification />
+            </div>
+            <div *ngIf="invoice_addForm.controls['identification'].invalid && (invoice_addForm.controls['identification'].dirty || invoice_addForm.controls['identification'].touched)" class="alert alert-danger">
+                <div *ngIf="invoice_addForm.controls['identification'].errors.required">
+                    Please Enter the identification
+                </div>
+            </div>
+
+			<div class="form-group">
+                <label class="col-md-4">details</label>
+                <input type="text" class="form-control" formControlName="details" #details />
+            </div>
+            <div *ngIf="invoice_addForm.controls['details'].invalid && (invoice_addForm.controls['details'].dirty || invoice_addForm.controls['details'].touched)" class="alert alert-danger">
+                <div *ngIf="invoice_addForm.controls['details'].errors.required">
+                    Please Enter the details
+                </div>
+            </div>
+
+			<div class="form-group">
+                <label class="col-md-4">value</label>
+                <input type="text" class="form-control" formControlName="value" #value />
+            </div>
+            <div *ngIf="invoice_addForm.controls['value'].invalid && (invoice_addForm.controls['value'].dirty || invoice_addForm.controls['value'].touched)" class="alert alert-danger">
+                <div *ngIf="invoice_addForm.controls['value'].errors.required">
+                    Please Enter the value
+                </div>
+            </div>
+
+
+          
+            <div class="form-group">
+                <button class="btn btn-primary" (click)="addInvoice( identification.value,details.value,value.value )" [disabled]="!invoice_addForm.valid || invoice_addForm.pristine">Add Invoice</button>
+            </div>
+        </form>
+    </div>
+</div>
+

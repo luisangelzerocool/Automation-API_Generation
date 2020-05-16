@@ -1,37 +1,24 @@
+
 <input class="form-control" type="text" name="search" placeholder="Search" [(ngModel)]="filter">
-
 <br>
-
-
 <table class="table table-bordered">
     <thead style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:rgb(81, 81, 207)">
         <tr>
-            <td> Serial </td>
-            <td> brand </td>
-            <td> model </td>
-            <td> ubication </td>
-            <td> price_shopping </td>
-            <td> receipt_shopping </td>
-            <td> creation_date </td>
-            <td> sale_date </td>
-            <td> seller_identification </td>
-            <td> state </td>
+ 
+			<td> numero </td><td> detalle </td><td> valor </td>
+ 
+ 
             <td>Edit</td>
             <td> Delete</td>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let invoice of invoice  | filter:filter">
-            <td>{{invoice.serial}}</td>
-            <td>{{invoice.brand}}</td>
-            <td>{{invoice.model}}</td>
-            <td>{{invoice.ubication}}</td>
-            <td>{{invoice.price_shopping}}</td>
-            <td>{{invoice.receipt_shopping}}</td>
-            <td>{{invoice.creation_date}}</td>
-            <td>{{invoice.sale_date}}</td>
-            <td>{{invoice.seller_identification}}</td>
-            <td>{{invoice.state}}</td>
+           
+
+		   <td>{{invoice.numero}}</td><td>{{invoice.detalle}}</td><td>{{invoice.valor}}</td>
+           
+		   
             <td><a [routerLink]="['/invoice/edit',invoice._id]" class="btn btn-primary"><i class="far fa-edit"></i></a></td>
             <td><a (click)="deleteInvoice(invoice._id)" class="btn btn-danger"><i class="far fa-trash-alt"></i></a></td>
         </tr>
@@ -40,3 +27,4 @@
 <hr>
 <button routerLink="/invoice/create" class="btn btn-primary"><i class="fas fa-plus"></i>Add new</button> &nbsp;
 <button (click)="refresh()" class="btn btn-secondary"><i class="fas fa-sync-alt"></i></button>
+

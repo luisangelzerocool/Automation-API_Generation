@@ -1,0 +1,49 @@
+
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="inventary_editForm" novalidate>
+			
+			
+			
+			<div class="form-group">
+                <label class="col-md-4">identification</label>
+                <input type="text" class="form-control" formControlName="identification" #identification [(ngModel)]="inventary.identification" />
+            </div>
+            <div *ngIf="inventary_editForm.controls['identification'].invalid && (inventary_editForm.controls['identification'].dirty || inventary_editForm.controls['identification'].touched)" class="alert alert-danger">
+                <div *ngIf="inventary_editForm.controls['identification'].errors.required">
+                    identification is required.
+                </div>
+            </div>
+
+			<div class="form-group">
+                <label class="col-md-4">nro_inventary</label>
+                <input type="text" class="form-control" formControlName="nro_inventary" #nro_inventary [(ngModel)]="inventary.nro_inventary" />
+            </div>
+            <div *ngIf="inventary_editForm.controls['nro_inventary'].invalid && (inventary_editForm.controls['nro_inventary'].dirty || inventary_editForm.controls['nro_inventary'].touched)" class="alert alert-danger">
+                <div *ngIf="inventary_editForm.controls['nro_inventary'].errors.required">
+                    nro_inventary is required.
+                </div>
+            </div>
+
+			<div class="form-group">
+                <label class="col-md-4">detail</label>
+                <input type="text" class="form-control" formControlName="detail" #detail [(ngModel)]="inventary.detail" />
+            </div>
+            <div *ngIf="inventary_editForm.controls['detail'].invalid && (inventary_editForm.controls['detail'].dirty || inventary_editForm.controls['detail'].touched)" class="alert alert-danger">
+                <div *ngIf="inventary_editForm.controls['detail'].errors.required">
+                    detail is required.
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <button type="button" (click)="updateInventary(identification.value,nro_inventary.value,detail.value)" [disabled]="inventary_editForm.invalid"
+                    class="btn btn-primary">Update Inventary</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+

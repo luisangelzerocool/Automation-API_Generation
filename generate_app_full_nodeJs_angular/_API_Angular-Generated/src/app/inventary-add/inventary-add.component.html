@@ -1,0 +1,45 @@
+
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="inventary_addForm" novalidate>
+
+            
+			<div class="form-group">
+                <label class="col-md-4">identification</label>
+                <input type="text" class="form-control" formControlName="identification" #identification />
+            </div>
+            <div *ngIf="inventary_addForm.controls['identification'].invalid && (inventary_addForm.controls['identification'].dirty || inventary_addForm.controls['identification'].touched)" class="alert alert-danger">
+                <div *ngIf="inventary_addForm.controls['identification'].errors.required">
+                    Please Enter the identification
+                </div>
+            </div>
+
+			<div class="form-group">
+                <label class="col-md-4">nro_inventary</label>
+                <input type="text" class="form-control" formControlName="nro_inventary" #nro_inventary />
+            </div>
+            <div *ngIf="inventary_addForm.controls['nro_inventary'].invalid && (inventary_addForm.controls['nro_inventary'].dirty || inventary_addForm.controls['nro_inventary'].touched)" class="alert alert-danger">
+                <div *ngIf="inventary_addForm.controls['nro_inventary'].errors.required">
+                    Please Enter the nro_inventary
+                </div>
+            </div>
+
+			<div class="form-group">
+                <label class="col-md-4">detail</label>
+                <input type="text" class="form-control" formControlName="detail" #detail />
+            </div>
+            <div *ngIf="inventary_addForm.controls['detail'].invalid && (inventary_addForm.controls['detail'].dirty || inventary_addForm.controls['detail'].touched)" class="alert alert-danger">
+                <div *ngIf="inventary_addForm.controls['detail'].errors.required">
+                    Please Enter the detail
+                </div>
+            </div>
+
+
+          
+            <div class="form-group">
+                <button class="btn btn-primary" (click)="addInventary( identification.value,nro_inventary.value,detail.value )" [disabled]="!inventary_addForm.valid || inventary_addForm.pristine">Add Inventary</button>
+            </div>
+        </form>
+    </div>
+</div>
+

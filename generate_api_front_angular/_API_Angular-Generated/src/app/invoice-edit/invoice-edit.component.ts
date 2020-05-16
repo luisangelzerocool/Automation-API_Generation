@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -21,22 +22,15 @@ export class InvoiceEditComponent implements OnInit {
 
   createForm() {
     this.invoice_editForm = this.fb.group({
-      serial:  ['', Validators.required],
-      brand:  ['', Validators.required],
-      model:  ['', Validators.required],
-      ubication: ['', Validators.required],
-      price_shopping:  ['', Validators.required],
-      receipt_shopping: ['', Validators.required],
-      creation_date: ['', Validators.required],
-      sale_date:['', Validators.required],
-      seller_identification:['', Validators.required],
-      state: ['', Validators.required]
+      
+	  numero: ['', Validators.required],detalle: ['', Validators.required],valor: ['', Validators.required]
+	  
     });
   }
 
-  updateInvoice(serial,brand,model,ubication,price_shopping,receipt_shopping,creation_date,sale_date,seller_identification,state) {
+  updateInvoice(numero,detalle,valor) {
     this.route.params.subscribe(params => {
-      this.ms.updateInvoice(serial,brand,model,ubication,price_shopping,receipt_shopping,creation_date,sale_date,seller_identification,state, params['id']);
+      this.ms.updateInvoice(numero,detalle,valor ,params['id']);
       this.router.navigate(['invoice']);
     });
   }
@@ -50,3 +44,4 @@ export class InvoiceEditComponent implements OnInit {
     });
   }
 }
+
