@@ -1,3 +1,3 @@
-# ShellScript
+# Shell-Script
 
-Automatizaciones hechas con ShellScript 
+Automatizaciones hechas con Shell-Script 
