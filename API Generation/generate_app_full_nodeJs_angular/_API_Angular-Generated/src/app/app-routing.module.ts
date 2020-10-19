@@ -4,17 +4,9 @@ import {Routes , RouterModule} from '@angular/router';
 
 
 
-import { InventaryAddComponent } from './inventary-add/inventary-add.component';
-import { InventaryEditComponent } from './inventary-edit/inventary-edit.component';
-import { InventaryGetComponent } from './inventary-get/inventary-get.component';
-
-import { InvoiceAddComponent } from './invoice-add/invoice-add.component';
-import { InvoiceEditComponent } from './invoice-edit/invoice-edit.component';
-import { InvoiceGetComponent } from './invoice-get/invoice-get.component';
-
-import { MachineAddComponent } from './machine-add/machine-add.component';
-import { MachineEditComponent } from './machine-edit/machine-edit.component';
-import { MachineGetComponent } from './machine-get/machine-get.component';
+import { LuisAddComponent } from './luis-add/luis-add.component';
+import { LuisEditComponent } from './luis-edit/luis-edit.component';
+import { LuisGetComponent } from './luis-get/luis-get.component';
 
 
 
@@ -23,42 +15,16 @@ const routes = [
     
 	
 	{
-        path: 'inventary/create',
-        component: InventaryAddComponent
+        path: 'luis/create',
+        component: LuisAddComponent
     },
     {
-        path: 'inventary',
-        component: InventaryGetComponent
+        path: 'luis',
+        component: LuisGetComponent
     } ,
     {
-        path: 'inventary/edit/:id',
-        component: InventaryEditComponent
-    },
-
-	{
-        path: 'invoice/create',
-        component: InvoiceAddComponent
-    },
-    {
-        path: 'invoice',
-        component: InvoiceGetComponent
-    } ,
-    {
-        path: 'invoice/edit/:id',
-        component: InvoiceEditComponent
-    },
-
-	{
-        path: 'machine/create',
-        component: MachineAddComponent
-    },
-    {
-        path: 'machine',
-        component: MachineGetComponent
-    } ,
-    {
-        path: 'machine/edit/:id',
-        component: MachineEditComponent
+        path: 'luis/edit/:id',
+        component: LuisEditComponent
     },
 
 	

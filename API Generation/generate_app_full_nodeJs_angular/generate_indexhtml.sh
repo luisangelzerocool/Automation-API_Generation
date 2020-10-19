@@ -20,5 +20,5 @@ index='
 
 '
 echo "$index" > ./$_nombreProject/src/index.html
-echo 'index.html generado correctamente!'
+echo '  - index.html, OK!'
 

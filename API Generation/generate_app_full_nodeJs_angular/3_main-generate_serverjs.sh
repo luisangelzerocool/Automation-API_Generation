@@ -1,5 +1,5 @@
 #!/bin/bash
-echo '******GENERANDO EL SERVER JS******'
+echo '# Generando el Server JS...'
 echo 'Introduzca el nombre de la BD:'
 read _nombreBD
 
@@ -44,5 +44,5 @@ app.listen(port, function() {
 })
 "
 echo "$server" > ./_API_NodeJS-Generated/server.js
-echo 'Server.js generado correctamente!'
+echo '  - Server.js, OK!'
 

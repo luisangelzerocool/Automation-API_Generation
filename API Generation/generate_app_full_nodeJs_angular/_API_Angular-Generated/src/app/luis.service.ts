@@ -5,17 +5,17 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class InventaryService {
+export class LuisService {
 
-  uri = 'http://localhost:3000/inventary';
+  uri = 'http://localhost:3000/luis';
 
 
   constructor(private http: HttpClient) { }
 
-  addInventary(identification,nro_inventary,detail) {
+  addLuis(luis1,luis2) {
     const obj = {
       
-	  identification:identification,nro_inventary:nro_inventary,detail:detail
+	  luis1:luis1,luis2:luis2
 	  
     };
     console.log(obj);
@@ -23,25 +23,25 @@ export class InventaryService {
       .subscribe(res => console.log('Done'));
   }
 
-  getInventary() {
+  getLuis() {
     return this.http.get(`${this.uri}`);
   }
 
-  editInventary(id) {
+  editLuis(id) {
     return this.http.get(`${this.uri}/edit/${id}`);
   }
 
-  updateInventary(identification,nro_inventary,detail ,id) {
+  updateLuis(luis1,luis2 ,id) {
     const obj = {
       
-	  identification:identification,nro_inventary:nro_inventary,detail:detail
+	  luis1:luis1,luis2:luis2
 	  
     };
     this.http.post(`${this.uri}/update/${id}`, obj)
       .subscribe(res => console.log('Done'));
   }
 
-  deleteInventary(id) {
+  deleteLuis(id) {
     return this.http.get(`${this.uri}/delete/${id}`);
   }
   

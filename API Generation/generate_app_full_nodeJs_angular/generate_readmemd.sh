@@ -30,5 +30,5 @@ Después de generado el arquetipo, desde la ruta de la API se ejecuta `npm insta
 * Usamos los routes para crear la lógica del negocio, el CRUD de la API. 
 '
 echo "$readme" > ./_API_NodeJS-Generated/README.md
-echo 'README.md generado correctamente!'
+echo '  - README.md, OK!'
 

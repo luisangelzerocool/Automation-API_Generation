@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 var app = express();
 
 var port = process.env.PORT || 3000;
-const mongoURI = 'mongodb://localhost:27017/luisdb';
+const mongoURI = 'mongodb://localhost:27017/db';
 
 mongoose.connect(mongoURI,{ useNewUrlParser: true })
 .then(() => console.log('MongoDB Connected'))
@@ -17,12 +17,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 //modelos:
-var inventaryRouter= require('./routes/inventaryRouter'); 
-app.use('/inventary', inventaryRouter);
-var invoiceRouter= require('./routes/invoiceRouter'); 
-app.use('/invoice', invoiceRouter);
-var machineRouter= require('./routes/machineRouter'); 
-app.use('/machine', machineRouter);
+var luisRouter= require('./routes/luisRouter'); 
+app.use('/luis', luisRouter);
 
 
 app.listen(port, function() {

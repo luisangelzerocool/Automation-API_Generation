@@ -135,7 +135,7 @@ tslint='
 
 '
 echo "$tslint" > ./$_nombreProject/tslint.json
-echo 'tslint.json generado correctamente!'
+echo '  - tslint.json, OK!'
 
 #src/tslint.json
 srctslint='
@@ -159,5 +159,5 @@ srctslint='
 }
 '
 echo "$srctslint" > ./$_nombreProject/src/tslint.json
-echo 'src/tslint.json generado correctamente!'
+echo '  - src/tslint.json, OK!'
 

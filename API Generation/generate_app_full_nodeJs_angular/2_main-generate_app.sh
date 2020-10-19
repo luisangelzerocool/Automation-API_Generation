@@ -1,5 +1,5 @@
 #!/bin/bash
-echo '******GENERANDO LOS COMPONENTES******'
+echo '# Generando los Componentes...'
 _nombreProject='_API_Angular-Generated'
 
 
@@ -174,7 +174,7 @@ export class ${nombreModeloMayus}Service {
 }
 "
 echo "$modeloServiceTs" > ./$_nombreProject/src/app/$nombreModeloMinus'.service.ts'
-echo "${nombreModeloMinus}.service.ts generado correctamente!"
+echo "  - ${nombreModeloMinus}.service.ts, OK!"
 
 
 ####### modelo_model.ts*************************************************************************************************
@@ -184,7 +184,7 @@ export default class ${nombreModeloMayus} {
 }
 "
 echo "$modelTs" > ./$_nombreProject/src/app/$nombreModeloSinExt'_model.ts'
-echo "${nombreModeloSinExt}_model.ts generado correctamente!"
+echo "  - ${nombreModeloSinExt}_model.ts, OK!"
 
 ####### COMPONENTE modelo_add *************************************************************************************************
 `mkdir ./$_nombreProject/src/app/$nombreModeloMinus'-add'`
@@ -208,7 +208,7 @@ echo "$addHTML" > ./$_nombreProject/src/app/tempFiles/$nombreModeloMinus'-add.co
 #2.remplazo en el archivo temporal html el ¬ por el "
 `sed -i 's/¬/"/g' "./$_nombreProject/src/app/tempFiles/$nombreModeloMinus-add.component.html"`
 `mv $_nombreProject/src/app/tempFiles/$nombreModeloMinus'-add.component.html' $_nombreProject/src/app/$nombreModeloMinus'-add'/`
-echo "${nombreModeloMinus}-add.component.html generado correctamente!"
+echo "  - ${nombreModeloMinus}-add.component.html, OK!"
 
 
 addTS="
@@ -254,11 +254,12 @@ export class ${nombreModeloMayus}AddComponent implements OnInit {
 
 }
 "
-echo "__________GENERANDO COMPONENTE ${nombreModeloMinus}__________"
+echo ''
+echo "  # Generando Componente: ${nombreModeloMinus}..."
 echo " " > ./$_nombreProject/src/app/$nombreModeloMinus'-add'/$nombreModeloMinus'-add.component.css'
-echo "${nombreModeloMinus}-add.component.css generado correctamente!"
+echo "  - ${nombreModeloMinus}-add.component.css, OK!"
 echo "$addTS" > ./$_nombreProject/src/app/$nombreModeloMinus'-add'/$nombreModeloMinus'-add.component.ts'
-echo "${nombreModeloMinus}-add.component.ts generado correctamente!"
+echo "  - ${nombreModeloMinus}-add.component.ts, OK!"
 
 
 ####### COMPONENTE modelo_edit *************************************************************************************************
@@ -287,7 +288,7 @@ echo "$editHTML" > ./$_nombreProject/src/app/tempFiles/$nombreModeloMinus'-edit.
 #2.remplazo en el archivo temporal html el ¬ por el "
 `sed -i 's/¬/"/g' "$_nombreProject/src/app/tempFiles/$nombreModeloMinus-edit.component.html"`
 `mv $_nombreProject/src/app/tempFiles/$nombreModeloMinus'-edit.component.html' $_nombreProject/src/app/$nombreModeloMinus'-edit'/`
-echo "${nombreModeloMinus}-edit.component.html generado correctamente!"
+echo "  - ${nombreModeloMinus}-edit.component.html, OK!"
 
 editTS="
 import { Component, OnInit } from '@angular/core';
@@ -337,9 +338,9 @@ export class ${nombreModeloMayus}EditComponent implements OnInit {
 }
 "
 echo " " > ./$_nombreProject/src/app/$nombreModeloMinus'-edit'/$nombreModeloMinus'-edit.component.css'
-echo "${nombreModeloMinus}-edit.component.css generado correctamente!"
+echo "  - ${nombreModeloMinus}-edit.component.css, OK!"
 echo "$editTS" > ./$_nombreProject/src/app/$nombreModeloMinus'-edit'/$nombreModeloMinus'-edit.component.ts'
-echo "${nombreModeloMinus}-edit.component.ts generado correctamente!"
+echo "  - ${nombreModeloMinus}-edit.component.ts, OK!"
 
 
 ####### COMPONENTE modelo_get *************************************************************************************************
@@ -380,7 +381,7 @@ echo "$getHTML" > ./$_nombreProject/src/app/tempFiles/$nombreModeloMinus'-get.co
 #2.remplazo en el archivo temporal html el ¬ por el "
 `sed -i 's/¬/"/g' "$_nombreProject/src/app/tempFiles/$nombreModeloMinus-get.component.html"`
 `mv $_nombreProject/src/app/tempFiles/$nombreModeloMinus'-get.component.html' $_nombreProject/src/app/$nombreModeloMinus'-get'/`
-echo "${nombreModeloMinus}-get.component.html generado correctamente!"
+echo "  - ${nombreModeloMinus}-get.component.html, OK!"
 
 getTS="
 import { Component, OnInit } from '@angular/core';
@@ -415,9 +416,9 @@ export class ${nombreModeloMayus}GetComponent implements OnInit {
 }
 "
 echo " " > ./$_nombreProject/src/app/$nombreModeloMinus'-get'/$nombreModeloMinus'-get.component.css'
-echo "${nombreModeloMinus}-get.component.css generado correctamente!"
+echo "  - ${nombreModeloMinus}-get.component.css, OK!"
 echo "$getTS" > ./$_nombreProject/src/app/$nombreModeloMinus'-get'/$nombreModeloMinus'-get.component.ts'
-echo "${nombreModeloMinus}-get.component.ts generado correctamente!"
+echo "  - ${nombreModeloMinus}-get.component.ts, OK!"
 
 
 
@@ -450,7 +451,7 @@ echo "$appComponentHTML" > ./$_nombreProject/src/app/tempFiles/app.component.htm
 #2.remplazo en el archivo temporal html el ¬ por el "
 `sed -i 's/¬/"/g' "$_nombreProject/src/app/tempFiles/app.component.html"`
 `mv $_nombreProject/src/app/tempFiles/app.component.html $_nombreProject/src/app/`
-echo "app.component.html generado correctamente!"
+echo "  - app.component.html, OK!"
 
 appComponentTs="
 import { Component } from '@angular/core';
@@ -496,9 +497,9 @@ export class AppComponent {
 }
 "
 echo " " > ./$_nombreProject/src/app/app.component.css
-echo "app.component.css generado correctamente!"
+echo "  - app.component.css, OK!"
 echo "$appComponentTs" > ./$_nombreProject/src/app/app.component.ts
-echo 'app.component.ts generado correctamente!'
+echo '  - app.component.ts, OK!'
 
 
 
@@ -527,7 +528,7 @@ export class AppRoutingModule {
 }
 "
 echo "$appRoutingModule" > ./$_nombreProject/src/app/app-routing.module.ts
-echo "app-routing.module.ts generado correctamente!"
+echo "  - app-routing.module.ts, OK!"
 
 ####### APP.MODULE.TS  *************************************************************************************************
 appModule="
@@ -567,7 +568,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 export class AppModule { }
 "
 echo "$appModule" > ./$_nombreProject/src/app/app.module.ts
-echo "app.module.ts generado correctamente!"
+echo "  - app.module.ts, OK!"
 
 
 #ELIMINO CARPETA TEMPORALES

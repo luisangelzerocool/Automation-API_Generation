@@ -1,5 +1,5 @@
 #!/bin/bash
-echo '******GENERANDO EL MODELO JS******'
+echo '# Generando el Modelo JS...'
 echo 'Desea agregar un modelo(y/n)?'
 read _condicion
 while [ $_condicion = y ]

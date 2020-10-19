@@ -35,5 +35,5 @@ package='{
 }
 '
 echo "$package" > ./_API_NodeJS-Generated/package.json
-echo 'package.json generado correctamente!'
+echo '  - package.json, OK!'
 

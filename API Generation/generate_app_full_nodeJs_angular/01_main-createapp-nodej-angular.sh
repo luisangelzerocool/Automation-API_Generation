@@ -1,5 +1,5 @@
 #!/bin/bash
-echo '******CREANDO APP ANGULAR Y NODE JS CON MONGODB******'
+echo '# Creando App Angular y NodeJS Con MongoDB ...'
 
 ./1_main-generate_arquetipo_apiNode.sh
 ./2_main-generate_api_models.sh

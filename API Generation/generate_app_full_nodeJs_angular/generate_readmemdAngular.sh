@@ -45,5 +45,5 @@ Después de generado el arquetipo, desde la ruta de la API se ejecuta `npm insta
 
 '
 echo "$readme" > ./$_nombreProject/README.md
-echo 'README.md generado correctamente!'
+echo '  - README.md, OK!'
 

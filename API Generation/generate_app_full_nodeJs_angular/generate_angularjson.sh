@@ -141,5 +141,5 @@ angular='
 '
 
 echo "$angular" > ./$_nombreProject/angular.json
-echo 'angular.json generado correctamente!'
+echo '  - angular.json, OK!'
 

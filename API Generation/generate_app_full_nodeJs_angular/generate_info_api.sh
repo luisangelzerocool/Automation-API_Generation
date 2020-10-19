@@ -43,6 +43,6 @@ metodo: get
 
 
 echo "$infoAPI" > ./_API_NodeJS-Generated/infoAPI/'infoAPI_'$_modelo.txt
-echo 'infoAPI.txt generado correctamente!'
+echo '  - infoAPI.txt, OK!'
 
 

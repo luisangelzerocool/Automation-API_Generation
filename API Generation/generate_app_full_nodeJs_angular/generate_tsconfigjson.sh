@@ -21,5 +21,5 @@ tsconfig='
 
 '
 echo "$tsconfig" > ./$_nombreProject/tsconfig.json
-echo 'tsconfig.json generado correctamente!'
+echo '  - tsconfig.json, OK!'
 

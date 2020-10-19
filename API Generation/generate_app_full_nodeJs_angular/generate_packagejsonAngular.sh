@@ -57,5 +57,5 @@ package='
 }
 '
 echo "$package" > ./$_nombreProject/package.json
-echo 'package.json generado correctamente!'
+echo '  - package.json, OK!'
 

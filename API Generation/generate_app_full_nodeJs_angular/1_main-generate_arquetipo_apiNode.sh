@@ -1,5 +1,5 @@
 #!/bin/bash
-echo '******GENERANDO EL ARQUETIPO******'
+echo '# Generando el Arquetipo de NodeJS...'
 
 `rm -rf ./_API_NodeJS-Generated`
 `mkdir ./_API_NodeJS-Generated`
@@ -10,8 +10,6 @@ echo '******GENERANDO EL ARQUETIPO******'
 
 #Package.json
 ./generate_packagejson.sh 
-#Package-lock.json
-./generate_package-lockjson.sh 
 #README.md
 ./generate_readmemd.sh 
 

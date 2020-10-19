@@ -9,7 +9,7 @@ export const environment = {
 };
 '
 echo "$environment" > ./$_nombreProject/src/environments/environment.ts
-echo 'environment.ts generado correctamente!'
+echo '  - environment.ts, OK!'
 
 #environment.prod.ts
 environmentprod='
@@ -18,4 +18,4 @@ export const environment = {
 };
 '
 echo "$environmentprod" > ./$_nombreProject/src/environments/environment.prod.ts
-echo 'environment.prod.ts generado correctamente!'
+echo '  - environment.prod.ts, OK!'

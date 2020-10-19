@@ -84,5 +84,5 @@ module.exports = $_modeloRouter;
 "
 
 echo "$route" > ./_API_NodeJS-Generated/routes/$_modeloRouter.js 
-echo 'modeloRouter.js generado correctamente!'
+echo '  - modeloRouter.js, OK!'
 

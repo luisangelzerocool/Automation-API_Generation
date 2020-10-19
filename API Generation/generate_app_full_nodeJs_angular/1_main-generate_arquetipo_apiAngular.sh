@@ -1,5 +1,5 @@
 #!/bin/bash
-echo '******GENERANDO EL ARQUETIPO******'
+echo '# Generando el Arquetipo de Angular...'
 
 _nombreProject='_API_Angular-Generated'
 
@@ -13,16 +13,12 @@ _nombreProject='_API_Angular-Generated'
 
 #Package.json
 ./generate_packagejsonAngular.sh $_nombreProject
-#Package-lock.json
-./generate_package-lockjsonAngular.sh $_nombreProject
 #README.md
 ./generate_readmemdAngular.sh $_nombreProject
 #tslint.json
 ./generate_tslintjson.sh $_nombreProject
 #Angular.json
 ./generate_angularjson.sh $_nombreProject
-#.editorconfig
-./generate_.editorconfig.sh $_nombreProject
 #tsconfig.json
 ./generate_tsconfigjson.sh $_nombreProject
 #filesAuxSrc

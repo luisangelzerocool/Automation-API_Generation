@@ -28,5 +28,5 @@ const $_modeloSchema = new Schema({
 module.exports = mongoose.model('$_modelo', $_modeloSchema);
 "
 echo "$modelo" > ./_API_NodeJS-Generated/models/$_modelo.js 
-echo 'modelo.js generado correctamente!'
+echo '  - modelo.js, OK!'
 

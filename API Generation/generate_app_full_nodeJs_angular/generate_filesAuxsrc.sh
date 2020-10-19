@@ -18,7 +18,7 @@ tsconfig='
 
 '
 echo "$tsconfig" > ./$_nombreProject/src/tsconfig.app.json
-echo 'tsconfig.app.json generado correctamente!'
+echo '  - tsconfig.app.json, OK!'
 
 #styles.css
 styles='
@@ -26,14 +26,14 @@ styles='
 @import "../node_modules/ng2-slim-loading-bar/style.css";
 '
 echo "$styles" > ./$_nombreProject/src/styles.css
-echo 'styles.css generado correctamente!'
+echo '  - styles.css, OK!'
 
 #polyfills.ts
 polyfills="
 import 'zone.js/dist/zone';  // Included with Angular CLI.
 "
 echo "$polyfills" > ./$_nombreProject/src/polyfills.ts
-echo 'polyfills.ts generado correctamente!'
+echo '  - polyfills.ts, OK!'
 
 #main.ts
 main="
@@ -52,7 +52,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 
 "
 echo "$main" > ./$_nombreProject/src/main.ts
-echo 'main.ts generado correctamente!'
+echo '  - main.ts, OK!'
 
 
 #browserslist
@@ -70,4 +70,4 @@ not dead
 not IE 9-11
 '
 echo "$browserslist" > ./$_nombreProject/src/browserslist
-echo 'browserslist generado correctamente!'
+echo '  - browserslist, OK!'
