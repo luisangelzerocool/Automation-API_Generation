@@ -1,3 +1,3 @@
-# Shell-Script
+# Scripting
 
-Automatizaciones hechas con Shell-Script 
+Automations developments with Shell Scripting

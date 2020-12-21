@@ -1,8 +1,0 @@
-Generate API BAK NodeJS
-
-Esta es la unificación de los scripts de generación tanto para Nodejs como para Angular
-
-
-# ¿Como se genera?
-1. se ejecuta ./01_main-createapp-nodej-angular.sh
-2. se sigue los pasos indicados por consola
